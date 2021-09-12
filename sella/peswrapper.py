@@ -197,6 +197,10 @@ class PES:
                 return False
         drdx, Ucons, Unred, Ufree = self._calc_basis()
 
+        if new_point and not feval:
+            print("Force change feval")
+            feval = True
+
         if feval:
             f, g = self.eval()
             L = np.linalg.lstsq(drdx.T, g, rcond=None)[0]
