@@ -13,7 +13,7 @@ An example script
 from ase.build import fcc111, add_adsorbate
 from ase.calculators.emt import EMT
 
-from sella import Sella, Constraints
+from sellac import Sella, Constraints
 
 # Set up your system as an ASE atoms object
 slab = fcc111('Cu', (5, 5, 6), vacuum=7.5)
