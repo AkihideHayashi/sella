@@ -233,11 +233,11 @@ def _ase_constraints_to_dict(constraints):
                 if xyz:
                     cart.add((idx, i))
         elif isinstance(constraint, FixBondLengths):
-            bonds.update(set(constraint.pairs))
+            bonds.update(set([tuple(pair) for pair in constraint.pairs]))
         elif isinstance(constraint, FixInternals):
-            bonds.update(set(constraints.bonds))
-            angles.update(set(constraints.angles))
-            dihedrals.update(set(constraints.dihedrals))
+            bonds.update(set([tuple(pair) for pair in constraints.bonds]))
+            angles.update(set([tuple(trio) for trio in constraints.angles]))
+            dihedrals.update(set([tuple(quartet) for quartet in constraints.dihedrals]))
         else:
             raise ValueError("Sella does not know how to handle the ASE {} "
                              "constraint object!".format(constraint))
