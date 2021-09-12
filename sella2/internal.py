@@ -20,7 +20,7 @@ from ase.constraints import (
 import jax.numpy as jnp
 from jax import jit, grad, jacfwd, jacrev, custom_jvp
 
-from sella.linalg import (
+from sella2.linalg import (
     SparseInternalJacobian, SparseInternalHessian, SparseInternalHessians
 )
 
@@ -347,11 +347,11 @@ class Rotation(Internal):
     def __eq__(self, other: object) -> bool:
         if not isinstance(other, self.__class__):
             return NotImplemented
-        if self.dim != other.dim:
+        if self.axis != other.axis:
             return False
         if len(self.indices) != len(other.indices):
             return False
-        if set(self.indices) != set(other.dim):
+        if set(self.indices) != set(other.axis):
             return False
         return True
 

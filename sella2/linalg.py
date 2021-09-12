@@ -4,7 +4,7 @@ from typing import List
 from itertools import product
 import numpy as np
 
-from sella.hessian_update import update_H
+from sella2.hessian_update import update_H
 
 from scipy.sparse.linalg import LinearOperator
 from scipy.linalg import eigh

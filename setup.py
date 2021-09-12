@@ -32,8 +32,8 @@ if debug:
 
 ext_modules = []
 for cy_file in cy_files:
-    ext_modules.append(Extension('.'.join(['sella', *cy_file]),
-                                 [os.path.join('sella', *cy_file) + cy_suff],
+    ext_modules.append(Extension('.'.join(['sella2', *cy_file]),
+                                 [os.path.join('sella2', *cy_file) + cy_suff],
                                  define_macros=macros,
                                  include_dirs=[np.get_include()]))
 
@@ -48,7 +48,7 @@ with open('README.md', 'r') as f:
 with open('requirements.txt', 'r') as f:
     install_requires = f.read().strip().split()
 
-setup(name='Sella',
+setup(name='Sella2',
       version=VERSION,
       author='Eric Hermes',
       author_email='ehermes@sandia.gov',

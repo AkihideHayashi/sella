@@ -11,8 +11,8 @@ from ase.utils import basestring
 from ase.io.trajectory import Trajectory
 
 from .restricted_step import get_restricted_step
-from sella.peswrapper import PES, InternalPES
-from sella.internal import Internals, Constraints
+from sella2.peswrapper import PES, InternalPES
+from sella2.internal import Internals, Constraints
 
 _default_kwargs = dict(
     minimum=dict(
