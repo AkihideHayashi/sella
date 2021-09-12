@@ -175,7 +175,7 @@ def _translation(
     dim: int,
     tvecs: jnp.ndarray
 ) -> float:
-    return pos[:, indices[-1]].mean()
+    return pos[:, dim].mean()
 
 
 class Translation(Internal):
