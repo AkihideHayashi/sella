@@ -1,6 +1,8 @@
 [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/zadorlab/sella)
 
-# Sella
+# Sella-constraints
+
+This is almost sella==2.0.2. This repository is renamed for the simultaneous use of sella==1.0.0, which allows IRC even in the presence of constraints, and sella==2.0.2, which has excellent constraints handling.
 
 Sella is a utility for finding first order saddle points
 
