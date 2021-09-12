@@ -29,8 +29,8 @@ if debug:
 
 ext_modules = []
 for cy_file in cy_files:
-    ext_modules.append(Extension('.'.join(['sella', *cy_file]),
-                                 [os.path.join('sella', *cy_file) + cy_suff],
+    ext_modules.append(Extension('.'.join(['sellac', *cy_file]),
+                                 [os.path.join('sellac', *cy_file) + cy_suff],
                                  define_macros=macros))
 
 if use_cython:
@@ -44,7 +44,7 @@ with open('README.md', 'r') as f:
 with open('requirements.txt', 'r') as f:
     install_requires = f.read().strip().split()
 
-setup(name='Sella',
+setup(name='Sellac',
       version='2.0.2',
       author='Eric Hermes',
       author_email='ehermes@sandia.gov',

@@ -2,7 +2,7 @@
 
 import numpy as np
 
-from sella.hessian_update import update_H
+from sellac.hessian_update import update_H
 
 from scipy.sparse.linalg import LinearOperator
 from scipy.linalg import eigh

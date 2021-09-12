@@ -2,7 +2,7 @@ import numpy as np
 
 from scipy.linalg import eigh, solve
 
-from sella.utilities.math import modified_gram_schmidt
+from sellac.utilities.math import modified_gram_schmidt
 from .hessian_update import symmetrize_Y
 
 

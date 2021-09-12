@@ -9,11 +9,11 @@ from ase.visualize import view
 from ase.calculators.singlepoint import SinglePointCalculator
 from ase.io.trajectory import Trajectory
 
-from sella.utilities.math import modified_gram_schmidt
-from sella.hessian_update import symmetrize_Y
-from sella.linalg import NumericalHessian, ApproximateHessian
-from sella.eigensolvers import rayleigh_ritz
-from sella.internal import Internals, Constraints, DuplicateInternalError
+from sellac.utilities.math import modified_gram_schmidt
+from sellac.hessian_update import symmetrize_Y
+from sellac.linalg import NumericalHessian, ApproximateHessian
+from sellac.eigensolvers import rayleigh_ritz
+from sellac.internal import Internals, Constraints, DuplicateInternalError
 
 
 class PES:
